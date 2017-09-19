@@ -30,7 +30,7 @@ class SideBar extends Component {
     let items = []
     if (this.props.location.pathname !== '/') {
       items.push(
-        { path: '/', content: '← Back Home' }
+        // { path: '/', content: '← Back Home' }
       )
     }
     items.push(
