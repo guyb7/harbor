@@ -67,6 +67,14 @@ class SideBar extends Component {
     return this.buildItems(items)
   }
 
+  getItemStyle(item) {
+    if (this.isCurrent(item.path)) {
+      return _.defaults(style.menuItemActive, style.menuItem)
+    } else {
+      return style.menuItem
+    }
+  }
+
   buildItems(items) {
     return _.map(items, (i, n) => {
       if (i.items) {
@@ -90,6 +98,7 @@ class SideBar extends Component {
             name={i.path}
             onClick={() => { this.onItemClick(i.path) }}
             active={this.isCurrent(i.path)}
+            style={this.getItemStyle(i)}
             >
             {i.content}
           </Menu.Item>

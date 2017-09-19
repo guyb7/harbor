@@ -1,4 +1,4 @@
-import { grey100, grey700, grey900 } from '../../../style/colors'
+import { white, grey100, grey700, grey900 } from '../../../style/colors'
 
 export default {
   menu: {
@@ -24,5 +24,7 @@ export default {
   },
   menuItemActive: {
     color: grey900,
+    boxShadow: 'inset 3px 0 0 0 ' + grey900,
+    backgroundColor: white
   }
 }
