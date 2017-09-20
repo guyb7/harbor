@@ -1,5 +1,5 @@
 export default {
   container: {
-    padding: 10
+    padding: 40
   }
 }

@@ -10,7 +10,7 @@ import LayoutSideNav from './LayoutSideNav/'
 import LayoutNoNav from './LayoutNoNav/'
 import Feed from '../views/Feed/'
 import Agenda from '../views/Agenda/'
-import Page2 from '../views/Page2/'
+import Opportunities from '../views/Opportunities/'
 import NotFound from '../views/NotFound/'
 import style from './style'
 
@@ -19,7 +19,7 @@ class Layout extends Component {
     const page = <Switch>
       <Route exact path="/" component={Feed} />
       <Route exact path="/agenda" component={Agenda} />
-      <Route exact path="/opportunities" component={Page2} />
+      <Route exact path="/opportunities" component={Opportunities} />
       <Route component={NotFound} />
     </Switch>
 
