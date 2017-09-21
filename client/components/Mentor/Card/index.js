@@ -4,28 +4,28 @@ import { withRouter } from 'react-router-dom'
 import { Card, Image, Label } from 'semantic-ui-react'
 import style from './style'
 
-class StartupCard extends Component {
-  navigateToStartupPage() {
-    this.props.history.push('/startups/' + this.props.startup.id)
+class MentorCard extends Component {
+  navigateTomentorPage() {
+    this.props.history.push('/people/' + this.props.mentor.id)
   }
 
   render() {
-    const startup = this.props.startup
+    const mentor = this.props.mentor
     return (
-      <Card onClick={() => this.navigateToStartupPage()}>
+      <Card onClick={() => this.navigateTomentorPage()}>
         <div style={style.imageContainer}>
-          <Image height={150} src={startup.logo} style={style.image}/>
+          <Image height={150} src={mentor.avatar} style={style.image}/>
         </div>
         <Card.Content>
           <Card.Header>
-            {startup.name}
+            {mentor.name}
           </Card.Header>
           <Card.Meta>
-            {startup.description}
+            {mentor.description}
           </Card.Meta>
           <Card.Description>
             {
-              startup.labels.map(l => <Label horizontal key={l}>{l}</Label>)
+              mentor.labels.map(l => <Label horizontal key={l}>{l}</Label>)
             }
           </Card.Description>
         </Card.Content>
@@ -34,4 +34,4 @@ class StartupCard extends Component {
   }
 }
 
-export default withRouter(StartupCard)
+export default withRouter(MentorCard)

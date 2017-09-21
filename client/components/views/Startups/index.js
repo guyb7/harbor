@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import * as actions from '../../../store/action-creators'
 
 import StartupCard from '../../Startup/Card'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Input } from 'semantic-ui-react'
 import startupLogo1 from '../../../assets/startup-canva.png'
 import startupLogo2 from '../../../assets/startup-reesio.png'
 import startupLogo3 from '../../../assets/startup-tuna.jpg'
@@ -106,6 +106,7 @@ class Startups extends Component {
   render() {
     return (
       <div style={style.container}>
+        <Input fluid icon='search' placeholder='Search...' style={style.search} />
         <Grid>
           {
             this.state.startups.map((s, n) => (

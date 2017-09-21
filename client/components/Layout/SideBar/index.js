@@ -45,7 +45,8 @@ class SideBar extends Component {
           { path: '/agenda', content: 'Agenda' },
           { path: '/opportunities', content: 'Opportunities' },
           { path: '/startups', content: 'Start-Ups' },
-          { path: '/mentors', content: 'Mentors' }
+          { path: '/mentors', content: 'Mentors' },
+          { path: '/people', content: 'All People' }
         ]
       },
       {
