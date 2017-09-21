@@ -8,7 +8,7 @@ class Logo extends Component {
     return (
       <div style={style.container}>
         <Icon name='rocket' />
-        Haven
+        Harbor
       </div>
     )
   }
