@@ -5,10 +5,10 @@ import * as actions from '../../../store/action-creators'
 import { Feed, Icon } from 'semantic-ui-react'
 import style from './style'
 import placeholderImg from '../../../assets/placeholder.png'
-import user1img from '../../../assets/addyosmani.png'
-import user2img from '../../../assets/gaearon.jpg'
-import user3img from '../../../assets/notwaldorf.jpg'
-import user4img from '../../../assets/torvalds.jpg'
+import user1img from '../../../assets/user1.png'
+import user2img from '../../../assets/user2.jpg'
+import user3img from '../../../assets/user3.jpg'
+import user4img from '../../../assets/user4.jpg'
 
 class HomeFeed extends Component {
   constructor(props) {

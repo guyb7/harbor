@@ -4,10 +4,10 @@ import * as actions from '../../../store/action-creators'
 
 import MentorCard from '../../Mentor/Card'
 import { Grid, Input } from 'semantic-ui-react'
-import mentorAvatar1 from '../../../assets/addyosmani.png'
-import mentorAvatar2 from '../../../assets/gaearon.jpg'
-import mentorAvatar3 from '../../../assets/notwaldorf.jpg'
-import mentorAvatar4 from '../../../assets/torvalds.jpg'
+import mentorAvatar1 from '../../../assets/user1.png'
+import mentorAvatar2 from '../../../assets/user2.jpg'
+import mentorAvatar3 from '../../../assets/user3.jpg'
+import mentorAvatar4 from '../../../assets/user4.jpg'
 import style from './style'
 
 class Mentors extends Component {

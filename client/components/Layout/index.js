@@ -13,6 +13,7 @@ import Agenda from '../views/Agenda/'
 import Opportunities from '../views/Opportunities/'
 import Startups from '../views/Startups/'
 import Mentors from '../views/Mentors/'
+import People from '../views/People/'
 import NotFound from '../views/NotFound/'
 import style from './style'
 
@@ -24,6 +25,7 @@ class Layout extends Component {
       <Route exact path="/opportunities" component={Opportunities} />
       <Route exact path="/startups" component={Startups} />
       <Route exact path="/mentors" component={Mentors} />
+      <Route exact path="/people" component={People} />
       <Route component={NotFound} />
     </Switch>
 
