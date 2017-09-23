@@ -97,6 +97,150 @@ class People extends Component {
           avatar: userAvatar1,
           description: 'Brain Surgeon',
           labels: ['Health', 'Medical']
+        }, , {
+          id: 'bradly-yost',
+          name: 'Bradly Yost',
+          avatar: userAvatar8,
+          description: 'Software Architect',
+          labels: ['Software']
+        }, {
+          id: 'otis-cruickshank',
+          name: 'Otis Cruickshank',
+          avatar: userAvatar5,
+          description: 'Reesio, CTO',
+          labels: ['Developer', 'Hardware']
+        }, {
+          id: 'vada-veum',
+          name: 'Vada Veum',
+          avatar: userAvatar6,
+          description: 'Reesio, Sales',
+          labels: ['Marketing', 'Biz-Dev']
+        }, {
+          id: 'gerry-kunde',
+          name: 'Gerry Kunde',
+          avatar: userAvatar4,
+          description: 'Investor',
+          labels: ['Angel']
+        }, {
+          id: 'favian-skiles',
+          name: 'Favian Skiles',
+          avatar: userAvatar7,
+          description: 'Tuna, Designer',
+          labels: ['Disgner']
+        }, {
+          id: 'marlin-kertzmann',
+          name: 'Marlin Kertzmann',
+          avatar: userAvatar1,
+          description: 'Brain Surgeon',
+          labels: ['Health', 'Medical']
+        }, , {
+          id: 'bradly-yost',
+          name: 'Bradly Yost',
+          avatar: userAvatar8,
+          description: 'Software Architect',
+          labels: ['Software']
+        }, {
+          id: 'otis-cruickshank',
+          name: 'Otis Cruickshank',
+          avatar: userAvatar5,
+          description: 'Reesio, CTO',
+          labels: ['Developer', 'Hardware']
+        }, {
+          id: 'vada-veum',
+          name: 'Vada Veum',
+          avatar: userAvatar6,
+          description: 'Reesio, Sales',
+          labels: ['Marketing', 'Biz-Dev']
+        }, {
+          id: 'gerry-kunde',
+          name: 'Gerry Kunde',
+          avatar: userAvatar4,
+          description: 'Investor',
+          labels: ['Angel']
+        }, {
+          id: 'favian-skiles',
+          name: 'Favian Skiles',
+          avatar: userAvatar7,
+          description: 'Tuna, Designer',
+          labels: ['Disgner']
+        }, {
+          id: 'marlin-kertzmann',
+          name: 'Marlin Kertzmann',
+          avatar: userAvatar1,
+          description: 'Brain Surgeon',
+          labels: ['Health', 'Medical']
+        }, , {
+          id: 'bradly-yost',
+          name: 'Bradly Yost',
+          avatar: userAvatar8,
+          description: 'Software Architect',
+          labels: ['Software']
+        }, {
+          id: 'otis-cruickshank',
+          name: 'Otis Cruickshank',
+          avatar: userAvatar5,
+          description: 'Reesio, CTO',
+          labels: ['Developer', 'Hardware']
+        }, {
+          id: 'vada-veum',
+          name: 'Vada Veum',
+          avatar: userAvatar6,
+          description: 'Reesio, Sales',
+          labels: ['Marketing', 'Biz-Dev']
+        }, {
+          id: 'gerry-kunde',
+          name: 'Gerry Kunde',
+          avatar: userAvatar4,
+          description: 'Investor',
+          labels: ['Angel']
+        }, {
+          id: 'favian-skiles',
+          name: 'Favian Skiles',
+          avatar: userAvatar7,
+          description: 'Tuna, Designer',
+          labels: ['Disgner']
+        }, {
+          id: 'marlin-kertzmann',
+          name: 'Marlin Kertzmann',
+          avatar: userAvatar1,
+          description: 'Brain Surgeon',
+          labels: ['Health', 'Medical']
+        }, , {
+          id: 'bradly-yost',
+          name: 'Bradly Yost',
+          avatar: userAvatar8,
+          description: 'Software Architect',
+          labels: ['Software']
+        }, {
+          id: 'otis-cruickshank',
+          name: 'Otis Cruickshank',
+          avatar: userAvatar5,
+          description: 'Reesio, CTO',
+          labels: ['Developer', 'Hardware']
+        }, {
+          id: 'vada-veum',
+          name: 'Vada Veum',
+          avatar: userAvatar6,
+          description: 'Reesio, Sales',
+          labels: ['Marketing', 'Biz-Dev']
+        }, {
+          id: 'gerry-kunde',
+          name: 'Gerry Kunde',
+          avatar: userAvatar4,
+          description: 'Investor',
+          labels: ['Angel']
+        }, {
+          id: 'favian-skiles',
+          name: 'Favian Skiles',
+          avatar: userAvatar7,
+          description: 'Tuna, Designer',
+          labels: ['Disgner']
+        }, {
+          id: 'marlin-kertzmann',
+          name: 'Marlin Kertzmann',
+          avatar: userAvatar1,
+          description: 'Brain Surgeon',
+          labels: ['Health', 'Medical']
         }, {
           id: 'bradly-yost',
           name: 'Bradly Yost',
