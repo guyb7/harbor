@@ -12,6 +12,7 @@ import Feed from '../views/Feed/'
 import Agenda from '../views/Agenda/'
 import Opportunities from '../views/Opportunities/'
 import Startups from '../views/Startups/'
+import Startup from '../views/Startup/'
 import Mentors from '../views/Mentors/'
 import People from '../views/People/'
 import NotFound from '../views/NotFound/'
@@ -24,6 +25,7 @@ class Layout extends Component {
       <Route exact path="/agenda" component={Agenda} />
       <Route exact path="/opportunities" component={Opportunities} />
       <Route exact path="/startups" component={Startups} />
+      <Route exact path="/startups/:id" component={Startup} />
       <Route exact path="/mentors" component={Mentors} />
       <Route exact path="/people" component={People} />
       <Route component={NotFound} />

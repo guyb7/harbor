@@ -26,18 +26,8 @@ class SideBar extends Component {
     return this.props.location.pathname === path
   }
 
-  getItems() {
-    let items = []
-    if (this.props.location.pathname !== '/') {
-      items.push(
-        // { path: '/', content: '← Back Home' }
-      )
-    }
-    items.push(
-      // { path: '/agenda', content: 'Agenda' },
-      // { path: '/opportunities', content: 'Opportunities' },
-      // { path: '/startups', content: 'Start-Ups' },
-      // { path: '/mentors', content: 'Mentors' },
+  getHomeItems() {
+    return [
       {
         header: '8200',
         items: [
@@ -52,7 +42,7 @@ class SideBar extends Component {
       {
         header: 'Reesio',
         items: [
-          { path: '/startups/reesio', content: 'Reesio Home' },
+          { path: '/startups/reesio', content: 'Reesio Profile' },
           { path: '/startups/reesio/activity', content: 'Activity' },
           { path: '/startups/reesio/files', content: 'Files' }
         ]
@@ -64,8 +54,30 @@ class SideBar extends Component {
           { path: '/user/action-items', content: 'Action Items' }
         ]
       }
-    )
-    return this.buildItems(items)
+    ]
+  }
+
+  getStartupItems() {
+    //TODO fix match params to update on route change
+    const base = '/startups/' + this.props.match.params.id
+    return [
+      { path: '/', content: '← Back Home' },
+      {
+        header: 'Reesio',
+        items: [
+          { path: base, content: 'Profile' },
+          { path: `${base}/activity`, content: 'Activity' },
+          { path: `${base}/files`, content: 'Files' }
+        ]
+      }
+    ]
+  }
+
+  getItems() {
+    if (this.props.location.pathname.startsWith('/startups/')) {
+      return this.buildItems(this.getStartupItems())
+    }
+    return this.buildItems(this.getHomeItems())
   }
 
   getItemStyle(item) {
