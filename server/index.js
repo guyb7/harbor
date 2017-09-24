@@ -12,5 +12,5 @@ app.use (function (req, res) {
 })
 
 app.listen(3020, () => {
-  console.log('UI Boilerplate is listenting')
+  console.log('Harbor server is listenting on port 3020')
 })

@@ -1,7 +1,7 @@
 {
-  "name": "ui-boilerplate",
+  "name": "harbor",
   "version": "1.0.0",
-  "description": "UI Boilerplate",
+  "description": "Harbor - Accelerator Management",
   "main": "index.js",
   "scripts": {
     "start:dev": "concurrently \"yarn start\" \"yarn build:watch\"",
