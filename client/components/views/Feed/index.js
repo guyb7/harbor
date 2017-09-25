@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../store/action-creators'
 
-import { Feed, Icon } from 'semantic-ui-react'
+import { Button, Card, Feed, Form, Icon, Label } from 'semantic-ui-react'
 import style from './style'
 import placeholderImg from '../../../assets/placeholder.png'
 import user1img from '../../../assets/user1.png'
@@ -98,6 +98,19 @@ class HomeFeed extends Component {
   render() {
     return (
       <div style={style.container}>
+        <div style={style.postForm}>
+          <Card fluid>
+            <Card.Description>
+              <Form>
+                <Form.TextArea placeholder='Post to everyone...' style={style.postFormInput} />
+              </Form>
+            </Card.Description>
+            <Card.Content extra>
+              <Label as='a' content='Add Photo' icon='mail' />
+              <Button floated='right'>Post</Button>
+            </Card.Content>
+          </Card>
+        </div>
         <Feed>
           {
             this.state.feed.map(p => 
