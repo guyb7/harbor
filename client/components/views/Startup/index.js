@@ -42,6 +42,10 @@ class Startup extends Component {
 
   componentDidMount() {
     this.props.dispatch(actions.setTitle('Reesio'))
+    this.props.dispatch(actions.setRouteInfo({
+      location: this.props.location,
+      match: this.props.match
+    }))
     this.loadStartupDetails()
   }
 

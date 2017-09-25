@@ -15,6 +15,14 @@ export function setTitle(value) {
   }
 }
 
+export function setRouteInfo({ location, match }) {
+  return {
+    type: 'SET_ROUTE_INFO',
+    location,
+    match
+  }
+}
+
 export function setTitleDelayed(value, delay) {
   return dispatch => {
     return getRemoteData({ param: value }).then(

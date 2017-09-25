@@ -58,18 +58,12 @@ class SideBar extends Component {
   }
 
   getStartupItems() {
-    //TODO fix match params to update on route change
-    const base = '/startups/' + this.props.match.params.id
+    const base = '/startups/' + _.get(this.props, 'route.match.params.id', '')
     return [
       { path: '/', content: '← Back Home' },
-      {
-        header: 'Reesio',
-        items: [
-          { path: base, content: 'Profile' },
-          { path: `${base}/activity`, content: 'Activity' },
-          { path: `${base}/files`, content: 'Files' }
-        ]
-      }
+      { path: base, content: 'Profile' },
+      { path: `${base}/activity`, content: 'Activity' },
+      { path: `${base}/files`, content: 'Files' }
     ]
   }
 
@@ -129,4 +123,6 @@ class SideBar extends Component {
   }
 }
 
-export default withRouter(connect()(SideBar))
+export default withRouter(connect(state => ({
+  route: state.route
+}))(SideBar))
