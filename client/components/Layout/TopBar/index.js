@@ -7,6 +7,10 @@ import Logo from '../Logo'
 import style from './style'
 
 class TopBar extends Component {
+  componentDidMount() {
+    this.props.dispatch(actions.setUser('startup-member'))
+  }
+
   changeUser(type) {
     this.props.dispatch(actions.setUser(type))
   }

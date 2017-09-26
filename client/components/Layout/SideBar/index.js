@@ -27,7 +27,7 @@ class SideBar extends Component {
   }
 
   getHomeItems() {
-    return [
+    const items = [
       {
         header: '8200',
         items: [
@@ -38,15 +38,39 @@ class SideBar extends Component {
           { path: '/mentors', content: 'Mentors' },
           { path: '/people', content: 'All People' }
         ]
-      },
-      {
-        header: 'Reesio',
-        items: [
-          { path: '/startups/reesio', content: 'Reesio Profile' },
-          { path: '/startups/reesio/activity', content: 'Activity' },
-          { path: '/startups/reesio/files', content: 'Files' }
-        ]
-      },
+      }
+    ]
+    const user = this.props.user
+    switch (user.type) {
+      case 'startup-member':
+        const startup = user.startup
+        items.push(
+          {
+            header: 'Reesio',
+            items: [
+              { path: `/startups/${startup.id}`, content: startup.name + ' Profile' },
+              { path: `/startups/${startup.id}/activity`, content: 'Activity' },
+              { path: `/startups/${startup.id}/files`, content: 'Files' }
+            ]
+          }
+        )
+        break;
+      case 'mentor':
+        items.push(
+          {
+            header: 'Your Startups',
+            items: _.map(user.startups, startup => {
+              return {
+                path: '/startups/' + startup.id,
+                content: startup.name
+              }
+            })
+          }
+        )
+        break;
+      default:
+    }
+    items.push(
       {
         header: 'You',
         items: [
@@ -54,7 +78,8 @@ class SideBar extends Component {
           { path: '/user/action-items', content: 'Action Items' }
         ]
       }
-    ]
+    )
+    return items
   }
 
   getStartupItems() {
@@ -124,5 +149,6 @@ class SideBar extends Component {
 }
 
 export default withRouter(connect(state => ({
-  route: state.route
+  route: state.route,
+  user: state.user
 }))(SideBar))

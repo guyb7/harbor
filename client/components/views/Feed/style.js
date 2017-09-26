@@ -3,6 +3,7 @@ export default {
     padding: 10
   },
   postForm: {
+    maxWidth: 500,
     paddingLeft: 50,
     paddingRight: 10,
     marginBottom: 10
