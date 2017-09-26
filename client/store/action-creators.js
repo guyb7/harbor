@@ -15,11 +15,11 @@ export function setTitle(value) {
   }
 }
 
-export function setRouteInfo({ location, match }) {
+export function setRouteInfo(props) {
   return {
     type: 'SET_ROUTE_INFO',
-    location,
-    match
+    location: props.location,
+    match: props.match
   }
 }
 
