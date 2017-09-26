@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../store/action-creators'
 
-import { Icon, Image, Label, List } from 'semantic-ui-react'
 import Activities from '../../Activities/'
 import startupLogo2 from '../../../assets/startup-reesio.png'
 import mentorAvatar2 from '../../../assets/user2.jpg'

@@ -49,6 +49,7 @@ class SideBar extends Component {
             header: 'Reesio',
             items: [
               { path: `/startups/${startup.id}`, content: startup.name + ' Profile' },
+              { path: `/startups/${startup.id}/action-items`, content: 'Action Items' },
               { path: `/startups/${startup.id}/activity`, content: 'Activity' },
               { path: `/startups/${startup.id}/files`, content: 'Files' }
             ]
@@ -87,6 +88,7 @@ class SideBar extends Component {
     return [
       { path: '/', content: '← Back Home' },
       { path: base, content: 'Profile' },
+      { path: `${base}/action-items`, content: 'Action Items' },
       { path: `${base}/activity`, content: 'Activity' },
       { path: `${base}/files`, content: 'Files' }
     ]
