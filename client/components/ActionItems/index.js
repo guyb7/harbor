@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import { Button, Dropdown, Form, List } from 'semantic-ui-react'
 import NewActionItemForm from './NewActionItemForm/'
+import ActionItemsFilter from './ActionItemsFilter/'
 import ActionItem from './ActionItem/'
 import style from './style'
 
@@ -10,6 +11,7 @@ class ActionItems extends Component {
     return (
       <div style={style.container}>
         <NewActionItemForm />
+        <ActionItemsFilter />
         <List divided relaxed='very' verticalAlign='middle'>
         {
           this.props.items.map(item => <ActionItem item={item} key={item.id} />)

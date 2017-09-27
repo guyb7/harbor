@@ -4,7 +4,7 @@ import moment from 'moment'
 import { Checkbox, Form, Image } from 'semantic-ui-react'
 import style from './style'
 
-class Activities extends Component {
+class ActionItem extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -51,4 +51,4 @@ class Activities extends Component {
   }
 }
 
-export default Activities
+export default ActionItem
