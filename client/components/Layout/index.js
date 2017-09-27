@@ -18,6 +18,7 @@ import StartupActivity from '../views/StartupActivity/'
 import StartupFiles from '../views/StartupFiles/'
 import Mentors from '../views/Mentors/'
 import People from '../views/People/'
+import Person from '../views/Person/'
 import NotFound from '../views/NotFound/'
 import style from './style'
 
@@ -34,6 +35,7 @@ class Layout extends Component {
       <Route exact path="/startups/:id/files" component={StartupFiles} />
       <Route exact path="/mentors" component={Mentors} />
       <Route exact path="/people" component={People} />
+      <Route exact path="/people/:id" component={Person} />
       <Route component={NotFound} />
     </Switch>
 
