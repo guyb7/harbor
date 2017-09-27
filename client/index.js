@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import createStore from './store/create-store'
 import 'semantic-ui-css/semantic.min.css'
+import 'react-dates/lib/css/_datepicker.css'
 
 import Layout from './components/Layout'
 import style from './style'
