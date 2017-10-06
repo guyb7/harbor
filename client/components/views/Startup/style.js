@@ -10,5 +10,8 @@ export default {
   logo: {
     height: 100,
     width: 'auto'
+  },
+  members: {
+    marginBottom: 30
   }
 }

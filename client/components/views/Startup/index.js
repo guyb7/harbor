@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../store/action-creators'
+import _ from 'lodash'
 
-import { Image, Label, List } from 'semantic-ui-react'
+import { Button, Image, Label, List } from 'semantic-ui-react'
 import PersonListItem from '../../Person/ListItem'
 import startupLogo2 from '../../../assets/startup-reesio.png'
 import userAvatar1 from '../../../assets/user1.png'
@@ -53,6 +54,10 @@ class Startup extends Component {
     })
   }
 
+  isMyStartup() {
+    return !!_.find(this.props.user.startups, { id: this.props.match.params.id })
+  }
+
   render() {
     return (
       <div style={style.container}>
@@ -76,6 +81,24 @@ class Startup extends Component {
                 this.state.members.map(person => <PersonListItem person={person} key={person.id} />)
               }
             </List>
+            {
+              this.props.user.type === 'mentor' &&
+              <Button.Group basic fluid vertical>
+                {
+                  this.isMyStartup() &&
+                  <Button content='Start Session' icon='file text outline' labelPosition='left' />
+                }
+                {
+                  !this.isMyStartup() &&
+                  <Button content='Add Startup' icon='pin' labelPosition='left' />
+                }
+                <Button content='Message' icon='mail outline' labelPosition='left' />
+                {
+                  this.isMyStartup() &&
+                  <Button content='Leave Startup' icon='ban' labelPosition='left' />
+                }
+              </Button.Group>
+            }
           </div>
         </div>
         <h3>Looking For</h3>
@@ -87,4 +110,6 @@ class Startup extends Component {
   }
 }
 
-export default connect()(Startup)
+export default connect(state => ({
+  user: state.user
+}))(Startup)
